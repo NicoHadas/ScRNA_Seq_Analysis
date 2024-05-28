@@ -1,7 +1,7 @@
 #      Created 04/11/2024             #
 #                                     #
-#      Author: Nicholas Hadas         #
-#   DNAH5 JCI - Original Object       #
+#      Author: Nicholas               #
+#        [Redacted]                   #
 
 
 ####-------Install Packages-------####
@@ -45,7 +45,7 @@ library(glue)
 
 
 ####-------Set a Working Directory-------####
-setwd('/Users/labuser/Documents/DNAH5_JCI')
+setwd('/Users/labuser/Documents/[Redacted]_JCI')
 
 
 ####-------Load Raw Data-------####
@@ -565,7 +565,7 @@ for (i in 1:3) {
 }
 
 
-####-------GSTA2 Expression Patterns-------####
+####-------[Redacted] Expression Patterns-------####
 
 # Load Raw Data #
 object <- readRDS("Objects/Rpca_13_SINGLETS_final.rds")
@@ -616,8 +616,8 @@ object_subset <- RenameIdents(object_subset, 'Iono' = "Ionocyte")
 object_subset$final_cluster <- Idents(object_subset)
 
 
-# GSTA2 Feature Plot #
-FeaturePlot(object_subset, "GSTA2",label = TRUE, label.size = 5)
+# [Redacted] Feature Plot #
+FeaturePlot(object_subset, "[Redacted]",label = TRUE, label.size = 5)
 
 # FOXJ1 Feature Plot #
 FeaturePlot(object_subset, "FOXJ1",label = TRUE, label.size = 5)
@@ -840,7 +840,7 @@ Idents(object_subset) <- object_subset$stim
 object_subset_ciliated <- subset(object_subset, subset = final_cluster %in% "Ciliated")
 
 # Run BoxPlot #
-plot1 <- do_BoxPlot(object_subset_ciliated, "GSTA2", font.size = 11, outlier.alpha = 0, plot.title = "GSTA2", legend.position = "right", legend.title = "Condition", xlab = "Condition", ylab = "Expression Level", map_signif_level = TRUE, plot.grid = FALSE, use_test = TRUE, test = "wilcox.test", comparisons = list(c("CTRL", "PCD"))) +
+plot1 <- do_BoxPlot(object_subset_ciliated, "[Redacted]", font.size = 11, outlier.alpha = 0, plot.title = "[Redacted]", legend.position = "right", legend.title = "Condition", xlab = "Condition", ylab = "Expression Level", map_signif_level = TRUE, plot.grid = FALSE, use_test = TRUE, test = "wilcox.test", comparisons = list(c("CTRL", "PCD"))) +
   theme(plot.title = element_text(hjust = 0.39))
 
 plot2 <- do_BoxPlot(object_subset_ciliated, "GSTA1", font.size = 11, outlier.alpha = 0, plot.title = "GSTA1", legend.position = "right", legend.title = "Condition", xlab = "Condition", ylab = "Expression Level", map_signif_level = TRUE, plot.grid = FALSE, use_test = TRUE, test = "wilcox.test", comparisons = list(c("CTRL", "PCD"))) +
@@ -879,7 +879,7 @@ library(ggplot2)
 install.packages("ggpubr")
 library(ggpubr)
 
-##---GSTA2---##
+##---[Redacted]---##
 
 # Add Expression Levels #
 Expression <- c(4.928632654,4.28654947, 7.816881325, 5.518480975, 6.42110915, 5.815485347, 5.289505233, 6.033010953, 
@@ -893,16 +893,16 @@ Condition <- c("Control",  "Control", "Control", "Control", "Control", "Control"
                "Control", "Control", "PCD", "PCD", "PCD", "PCD", "PCD", "PCD", "PCD", "PCD", "PCD")
 
 # Create DataFrame #
-GSTA2_Expression <- data.frame(Expression, Condition)
+[Redacted]_Expression <- data.frame(Expression, Condition)
 
 # Create Comparisons #
 my_comparisons <- list(c("Control", "PCD"))
 
 # Set Condition as Factor #
-GSTA2_Expression$Condition <- as.factor(GSTA2_Expression$Condition)
+[Redacted]_Expression$Condition <- as.factor([Redacted]_Expression$Condition)
 
 # Create Boxplot #
-p1 <- ggboxplot(GSTA2_Expression, x = "Condition", y = "Expression", color = "black", palette = c("brown", "aquamarine4"), fill = "Condition") + 
+p1 <- ggboxplot([Redacted]_Expression, x = "Condition", y = "Expression", color = "black", palette = c("brown", "aquamarine4"), fill = "Condition") + 
   stat_compare_means(comparisons = my_comparisons, method = "t.test", label = "p.signif") + 
   theme(
     legend.position = "right",
@@ -910,7 +910,7 @@ p1 <- ggboxplot(GSTA2_Expression, x = "Condition", y = "Expression", color = "bl
     axis.title.y = element_text(size=14, face="bold"),
     legend.title = element_text(size=14, face="bold"),
     plot.title = element_text(size=14, hjust = 0.5, face = "bold")) + 
-  ggtitle("GSTA2")
+  ggtitle("[Redacted]")
 
 # Visualize #
 p1
@@ -1201,7 +1201,7 @@ p1+p2+p3+p4+p5+p6+p7+p8+p9
 ####-------Bulk RNA Seq BoxPlot with P-Values - PCD 101-------####
 
 
-##---GSTA2---##
+##---[Redacted]---##
 
 # Add Expression Levels #
 Expression <- c(4.928632654,4.28654947,7.816881325,6.32007065,5.6973716,5.67821268,5.22265812,5.0514205,5.21177599,9.98914457,10.09819722,9.62400062,9.08375603,9.0028511,8.78810692,5.83847558,7.237522743
@@ -1212,16 +1212,16 @@ Condition <- c("Control",  "Control", "Control", "Control", "Control", "Control"
                "Control", "Control", "Control", "Control", "Control", "Control", "Control", "PCD", "PCD", "PCD")
 
 # Create DataFrame #
-GSTA2_Expression <- data.frame(Expression, Condition)
+[Redacted]_Expression <- data.frame(Expression, Condition)
 
 # Create Comparisons #
 my_comparisons <- list(c("Control", "PCD"))
 
 # Set Condition as Factor #
-GSTA2_Expression$Condition <- as.factor(GSTA2_Expression$Condition)
+[Redacted]_Expression$Condition <- as.factor([Redacted]_Expression$Condition)
 
 # Create Boxplot #
-p1 <- ggboxplot(GSTA2_Expression, x = "Condition", y = "Expression", color = "black", palette = c("brown", "aquamarine4"), fill = "Condition", outlier.shape = NA) + 
+p1 <- ggboxplot([Redacted]_Expression, x = "Condition", y = "Expression", color = "black", palette = c("brown", "aquamarine4"), fill = "Condition", outlier.shape = NA) + 
   stat_compare_means(comparisons = my_comparisons, method = "t.test", label = "p.signif") + 
   theme(
     legend.position = "right",
@@ -1229,7 +1229,7 @@ p1 <- ggboxplot(GSTA2_Expression, x = "Condition", y = "Expression", color = "bl
     axis.title.y = element_text(size=14, face="bold"),
     legend.title = element_text(size=14, face="bold"),
     plot.title = element_text(size=14, hjust = 0.5, face = "bold")) + 
-  ggtitle("GSTA2")
+  ggtitle("[Redacted]")
 
 # Visualize #
 p1
@@ -1442,7 +1442,7 @@ p1+p2+p3+p4+p5+p6+p7
 
 ####-------Bulk RNA Seq BoxPlot with P-Values - PCD 111-------####
 
-##---GSTA2---##
+##---[Redacted]---##
 
 # Add Expression Levels #
 Expression <- c(5.518480975,6.42110915,5.815485347,5.289505233,6.033010953,4.200619831,8.131633277,8.22495267,8.152066832)
@@ -1451,16 +1451,16 @@ Expression <- c(5.518480975,6.42110915,5.815485347,5.289505233,6.033010953,4.200
 Condition <- c("Control",  "Control", "Control", "Control", "Control", "Control", "PCD", "PCD", "PCD")
 
 # Create DataFrame #
-GSTA2_Expression <- data.frame(Expression, Condition)
+[Redacted]_Expression <- data.frame(Expression, Condition)
 
 # Create Comparisons #
 my_comparisons <- list(c("Control", "PCD"))
 
 # Set Condition as Factor #
-GSTA2_Expression$Condition <- as.factor(GSTA2_Expression$Condition)
+[Redacted]_Expression$Condition <- as.factor([Redacted]_Expression$Condition)
 
 # Create Boxplot #
-p1 <- ggboxplot(GSTA2_Expression, x = "Condition", y = "Expression", color = "black", palette = c("brown", "aquamarine4"), fill = "Condition", outlier.shape = NA) + 
+p1 <- ggboxplot([Redacted]_Expression, x = "Condition", y = "Expression", color = "black", palette = c("brown", "aquamarine4"), fill = "Condition", outlier.shape = NA) + 
   stat_compare_means(comparisons = my_comparisons, method = "t.test", label = "p.signif") + 
   theme(
     legend.position = "right",
@@ -1468,7 +1468,7 @@ p1 <- ggboxplot(GSTA2_Expression, x = "Condition", y = "Expression", color = "bl
     axis.title.y = element_text(size=14, face="bold"),
     legend.title = element_text(size=14, face="bold"),
     plot.title = element_text(size=14, hjust = 0.5, face = "bold")) + 
-  ggtitle("GSTA2")
+  ggtitle("[Redacted]")
 
 # Visualize #
 p1
@@ -1670,7 +1670,7 @@ p1+p2+p3+p4+p5+p6+p7
 
 ####-------Bulk RNA Seq BoxPlot with P-Values - PCD 114-------####
 
-##---GSTA2---##
+##---[Redacted]---##
 
 # Add Expression Levels #
 Expression <- c(5.518480975,6.42110915,5.815485347,5.289505233,6.033010953,4.200619831,5.911647249,7.041339043,7.307644461)
@@ -1679,16 +1679,16 @@ Expression <- c(5.518480975,6.42110915,5.815485347,5.289505233,6.033010953,4.200
 Condition <- c("Control",  "Control", "Control", "Control", "Control", "Control", "PCD", "PCD", "PCD")
 
 # Create DataFrame #
-GSTA2_Expression <- data.frame(Expression, Condition)
+[Redacted]_Expression <- data.frame(Expression, Condition)
 
 # Create Comparisons #
 my_comparisons <- list(c("Control", "PCD"))
 
 # Set Condition as Factor #
-GSTA2_Expression$Condition <- as.factor(GSTA2_Expression$Condition)
+[Redacted]_Expression$Condition <- as.factor([Redacted]_Expression$Condition)
 
 # Create Boxplot #
-p1 <- ggboxplot(GSTA2_Expression, x = "Condition", y = "Expression", color = "black", palette = c("brown", "aquamarine4"), fill = "Condition", outlier.shape = NA) + 
+p1 <- ggboxplot([Redacted]_Expression, x = "Condition", y = "Expression", color = "black", palette = c("brown", "aquamarine4"), fill = "Condition", outlier.shape = NA) + 
   stat_compare_means(comparisons = my_comparisons, method = "t.test", label = "p.signif") + 
   theme(
     legend.position = "right",
@@ -1696,7 +1696,7 @@ p1 <- ggboxplot(GSTA2_Expression, x = "Condition", y = "Expression", color = "bl
     axis.title.y = element_text(size=14, face="bold"),
     legend.title = element_text(size=14, face="bold"),
     plot.title = element_text(size=14, hjust = 0.5, face = "bold")) + 
-  ggtitle("GSTA2")
+  ggtitle("[Redacted]")
 
 # Visualize #
 p1
