@@ -1,7 +1,7 @@
 #      Created 05/08/2024             #
 #                                     #
 #      Author: Nicholas Hadas         #
-#             SR004328                #
+#             [Redacted]              #
 
 
 ####-------Install Packages-------####
@@ -620,7 +620,7 @@ integrated_object <- PrepSCTFindMarkers(integrated_object)
 # Run FindMarkers #
 for (i in 1:12) {
   name = FindMarkers(integrated_object, ident.1 = pcd_list[[i]], ident.2 = mother_list[[i]], verbose = TRUE)
-  file = paste0(unlist((strsplit(mother_list[[i]], split = "_")))[1], "_wilcox_", "spag1_", "SCT",  ".csv")
+  file = paste0(unlist((strsplit(mother_list[[i]], split = "_")))[1], "_wilcox_", "[Redacted]_", "SCT",  ".csv")
   write.csv(name, file)
 }
 
@@ -630,7 +630,7 @@ for (i in 1:12) {
 # Run FindMarkers #
 for (i in 1:12) {
   name = FindMarkers(integrated_object, ident.1 = pcd_list[[i]], ident.2 = mother_list[[i]], verbose = TRUE, test.use = "MAST")
-  file = paste0(unlist((strsplit(mother_list[[i]], split = "_")))[1], "_MAST_", "spag1_", "SCT", ".csv")
+  file = paste0(unlist((strsplit(mother_list[[i]], split = "_")))[1], "_MAST_", "[Redacted]_", "SCT", ".csv")
   write.csv(name, file)
 }
 
@@ -640,7 +640,7 @@ for (i in 1:12) {
 # Run FindMarkers #
 for (i in 1:12) {
   name = FindMarkers(integrated_object, ident.1 = pcd_list[[i]], ident.2 = possible_control_list[[i]], verbose = TRUE)
-  file = paste0(unlist((strsplit(mother_list[[i]], split = "_")))[1], "_wilcox_", "spag1_", "possible_control_", "SCT",  ".csv")
+  file = paste0(unlist((strsplit(mother_list[[i]], split = "_")))[1], "_wilcox_", "[Redacted]_", "possible_control_", "SCT",  ".csv")
   write.csv(name, file)
 }
 
@@ -650,7 +650,7 @@ for (i in 1:12) {
 # Run FindMarkers #
 for (i in 1:12) {
   name = FindMarkers(integrated_object, ident.1 = pcd_list[[i]], ident.2 = possible_control_list[[i]], verbose = TRUE, test.use = "MAST")
-  file = paste0(unlist((strsplit(mother_list[[i]], split = "_")))[1], "_MAST_", "spag1_", "possible_control_", "SCT", ".csv")
+  file = paste0(unlist((strsplit(mother_list[[i]], split = "_")))[1], "_MAST_", "[Redacted]_", "possible_control_", "SCT", ".csv")
   write.csv(name, file)
 }
 
@@ -677,7 +677,7 @@ wpid2name <- dplyr::select(wp.hs.gmt, wpid, name) #TERM2NAME
 ##---Alveolar Macrophages - geneList Example---##
 
 # Read CSV #
-AM.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/AM_wilcox_spag1_SCT.csv", header = TRUE)
+AM.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/AM_wilcox_[Redacted]_SCT.csv", header = TRUE)
 
 # Filter LogFC #
 AM.Markers <- AM.Markers[AM.Markers$avg_log2FC > 1.5,]
@@ -708,7 +708,7 @@ geneList<- sort(geneList,decreasing=TRUE) # Sort Decreasing
 ##---Alveolar Macrophages - WikiPathways---##
 
 # Read CSV #
-AM.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/AM_wilcox_spag1_SCT.csv", header = TRUE)
+AM.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/AM_wilcox_[Redacted]_SCT.csv", header = TRUE)
 
 # Rename Column 1 #
 colnames(AM.Markers)[1] <- "GeneNames"
@@ -739,7 +739,7 @@ barplot(AM.WP.UP, showCategory = 10) +
 ##---Alveolar Macrophages - CompareCluster---##
 
 # Read CSV #
-AM.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/AM_wilcox_spag1_SCT.csv", header = TRUE) # Mother
+AM.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/AM_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
 
 # Rename Column 1 #
 colnames(AM.Markers.Mother)[1] <- "GeneNames" # Mother
@@ -771,7 +771,7 @@ dotplot(AM.CC, showCategory = 5) +
 ##---B Cells - WikiPathways---##
 
 # Read CSV #
-BCells.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/B_Cells_wilcox_spag1_SCT.csv", header = TRUE) # Mother
+BCells.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/B_Cells_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
 
 # Rename Column 1 #
 colnames(BCells.Markers)[1] <- "GeneNames"
@@ -802,7 +802,7 @@ barplot(BCells.WP.UP, showCategory = 10) +
 ##---B Cells - CompareCluster---##
 
 # Read CSV #
-BCells.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/B_Cells_wilcox_spag1_SCT.csv", header = TRUE) # Mother
+BCells.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/B_Cells_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
 
 # Rename Column 1 #
 colnames(BCells.Markers.Mother)[1] <- "GeneNames" # Mother
@@ -834,7 +834,7 @@ dotplot(BCells.CC, showCategory = 5) +
 ##---Basal Cells - WikiPathways---##
 
 # Read CSV #
-BasalCells.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/Basal_wilcox_spag1_SCT.csv", header = TRUE) # Mother
+BasalCells.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/Basal_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
 
 # Rename Column 1 #
 colnames(BasalCells.Markers)[1] <- "GeneNames"
@@ -865,7 +865,7 @@ barplot(BasalCells.WP.UP, showCategory = 10) +
 ##---Basal Cells - CompareCluster---##
 
 # Read CSV #
-BasalCells.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/Basal_wilcox_spag1_SCT.csv", header = TRUE) # Mother
+BasalCells.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/Basal_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
 
 # Rename Column 1 #
 colnames(BasalCells.Markers.Mother)[1] <- "GeneNames" # Mother
@@ -897,7 +897,7 @@ dotplot(BasalCells.CC, showCategory = 5) +
 ##---Ciliated - WikiPathways---##
 
 # Read CSV #
-Ciliated.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/Ciliated_wilcox_spag1_SCT.csv", header = TRUE) # Mother
+Ciliated.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/Ciliated_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
 
 # Rename Column 1 #
 colnames(Ciliated.Markers)[1] <- "GeneNames"
@@ -928,7 +928,7 @@ barplot(Ciliated.WP.UP, showCategory = 10) +
 ##---Ciliated - CompareCluster---##
 
 # Read CSV #
-Ciliated.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/Ciliated_wilcox_spag1_SCT.csv", header = TRUE) # Mother
+Ciliated.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/Ciliated_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
 
 # Rename Column 1 #
 colnames(Ciliated.Markers.Mother)[1] <- "GeneNames" # Mother
@@ -960,7 +960,7 @@ dotplot(Ciliated.CC, showCategory = 5) +
 ##---cMono - WikiPathways---##
 
 # Read CSV #
-cMono.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/cMono_wilcox_spag1_SCT.csv", header = TRUE) # Mother
+cMono.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/cMono_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
 
 # Rename Column 1 #
 colnames(cMono.Markers)[1] <- "GeneNames"
@@ -991,7 +991,7 @@ barplot(cMono.WP.UP, showCategory = 10) +
 ##---cMono - CompareCluster---##
 
 # Read CSV #
-cMono.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/cMono_wilcox_spag1_SCT.csv", header = TRUE) # Mother
+cMono.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/cMono_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
 
 # Rename Column 1 #
 colnames(cMono.Markers.Mother)[1] <- "GeneNames" # Mother
@@ -1023,7 +1023,7 @@ dotplot(cMono.CC, showCategory = 5) +
 ##---Div - WikiPathways---##
 
 # Read CSV #
-Div.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/Div_wilcox_spag1_SCT.csv", header = TRUE) # Mother
+Div.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/Div_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
 
 # Rename Column 1 #
 colnames(Div.Markers)[1] <- "GeneNames"
@@ -1054,7 +1054,7 @@ barplot(Div.WP.UP, showCategory = 10) +
 ##---Div - CompareCluster---##
 
 # Read CSV #
-Div.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/Div_wilcox_spag1_SCT.csv", header = TRUE) # Mother
+Div.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/Div_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
 
 # Rename Column 1 #
 colnames(Div.Markers.Mother)[1] <- "GeneNames" # Mother
@@ -1086,7 +1086,7 @@ dotplot(Div.CC, showCategory = 5) +
 ##---IM - WikiPathways---##
 
 # Read CSV #
-IM.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/IM_wilcox_spag1_SCT.csv", header = TRUE) # Mother
+IM.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/IM_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
 
 # Rename Column 1 #
 colnames(IM.Markers)[1] <- "GeneNames"
@@ -1117,7 +1117,7 @@ barplot(IM.WP.UP, showCategory = 10) +
 ##---IM - CompareCluster---##
 
 # Read CSV #
-IM.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/IM_wilcox_spag1_SCT.csv", header = TRUE) # Mother
+IM.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/IM_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
 
 # Rename Column 1 #
 colnames(IM.Markers.Mother)[1] <- "GeneNames" # Mother
@@ -1149,7 +1149,7 @@ dotplot(IM.CC, showCategory = 5) +
 ##---ncMono - WikiPathways---##
 
 # Read CSV #
-ncMono.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/ncMono_wilcox_spag1_SCT.csv", header = TRUE) # Mother
+ncMono.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/ncMono_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
 
 # Rename Column 1 #
 colnames(ncMono.Markers)[1] <- "GeneNames"
@@ -1180,7 +1180,7 @@ barplot(ncMono.WP.UP, showCategory = 10) +
 ##---ncMono - CompareCluster---##
 
 # Read CSV #
-ncMono.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/ncMono_wilcox_spag1_SCT.csv", header = TRUE) # Mother
+ncMono.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/ncMono_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
 
 # Rename Column 1 #
 colnames(ncMono.Markers.Mother)[1] <- "GeneNames" # Mother
@@ -1212,7 +1212,7 @@ dotplot(ncMono.CC, showCategory = 5) +
 ##---NK - WikiPathways---##
 
 # Read CSV #
-NK.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/NK_wilcox_spag1_SCT.csv", header = TRUE) # Mother
+NK.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/NK_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
 
 # Rename Column 1 #
 colnames(NK.Markers)[1] <- "GeneNames"
@@ -1243,7 +1243,7 @@ barplot(NK.WP.UP, showCategory = 10) +
 ##---NK - CompareCluster---##
 
 # Read CSV #
-NK.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/NK_wilcox_spag1_SCT.csv", header = TRUE) # Mother
+NK.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/NK_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
 
 # Rename Column 1 #
 colnames(NK.Markers.Mother)[1] <- "GeneNames" # Mother
@@ -1275,7 +1275,7 @@ dotplot(NK.CC, showCategory = 5) +
 ##---PMN - WikiPathways---##
 
 # Read CSV #
-PMN.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/PMN_wilcox_spag1_SCT.csv", header = TRUE) # Mother
+PMN.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/PMN_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
 
 # Rename Column 1 #
 colnames(PMN.Markers)[1] <- "GeneNames"
@@ -1306,7 +1306,7 @@ barplot(PMN.WP.UP, showCategory = 10) +
 ##---PMN - CompareCluster---##
 
 # Read CSV #
-PMN.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/PMN_wilcox_spag1_SCT.csv", header = TRUE) # Mother
+PMN.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/PMN_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
 
 # Rename Column 1 #
 colnames(PMN.Markers.Mother)[1] <- "GeneNames" # Mother
@@ -1338,7 +1338,7 @@ dotplot(PMN.CC, showCategory = 5) +
 ##---Secretory - WikiPathways---##
 
 # Read CSV #
-Secretory.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/Secretory_wilcox_spag1_SCT.csv", header = TRUE) # Mother
+Secretory.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/Secretory_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
 
 # Rename Column 1 #
 colnames(Secretory.Markers)[1] <- "GeneNames"
@@ -1369,7 +1369,7 @@ barplot(Secretory.WP.UP, showCategory = 10) +
 ##---Secretory - CompareCluster---##
 
 # Read CSV #
-Secretory.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/Secretory_wilcox_spag1_SCT.csv", header = TRUE) # Mother
+Secretory.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/Secretory_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
 
 # Rename Column 1 #
 colnames(Secretory.Markers.Mother)[1] <- "GeneNames" # Mother
@@ -1401,7 +1401,7 @@ dotplot(Secretory.CC, showCategory = 5) +
 ##---T Cells - WikiPathways---##
 
 # Read CSV #
-T_Cells.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/T_Cells_wilcox_spag1_SCT.csv", header = TRUE) # Mother
+T_Cells.Markers <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/T_Cells_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
 
 # Rename Column 1 #
 colnames(T_Cells.Markers)[1] <- "GeneNames"
@@ -1432,7 +1432,7 @@ barplot(T_Cells.WP.UP, showCategory = 10) +
 ##---T Cells - CompareCluster---##
 
 # Read CSV #
-T_Cells.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/T_Cells_wilcox_spag1_SCT.csv", header = TRUE) # Mother
+T_Cells.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/T_Cells_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
 
 # Rename Column 1 #
 colnames(T_Cells.Markers.Mother)[1] <- "GeneNames" # Mother
@@ -1511,7 +1511,7 @@ integrated_object <- PrepSCTFindMarkers(integrated_object)
 
 # Run FindMarkers #
 name = FindMarkers(integrated_object, ident.1 = "Immune_PCD", ident.2 = "Immune_Mother", verbose = TRUE)
-file = paste0("PCD", "_wilcox_", "spag1_", "SCT", "_immune",  ".csv")
+file = paste0("PCD", "_wilcox_", "[Redacted]_", "SCT", "_immune",  ".csv")
 write.csv(name, file)
 
 
@@ -1519,7 +1519,7 @@ write.csv(name, file)
 
 # Run FindMarkers #
 name = FindMarkers(integrated_object, ident.1 = "Immune_PCD", ident.2 = "Immune_Mother", verbose = TRUE, test.use = "MAST")
-file = paste0("PCD", "_MAST_", "spag1_", "SCT", "_immune",  ".csv")
+file = paste0("PCD", "_MAST_", "[Redacted]_", "SCT", "_immune",  ".csv")
 write.csv(name, file)
 
 
@@ -1527,7 +1527,7 @@ write.csv(name, file)
 
 # Run FindMarkers #
 name = FindMarkers(integrated_object, ident.1 = "Immune_PCD", ident.2 = "Immune_Possible_Control", verbose = TRUE)
-file = paste0("PCD", "_wilcox_", "spag1_", "possible_control_", "SCT", "_immune",  ".csv")
+file = paste0("PCD", "_wilcox_", "[Redacted]_", "possible_control_", "SCT", "_immune",  ".csv")
 write.csv(name, file)
 
 
@@ -1535,7 +1535,7 @@ write.csv(name, file)
 
 # Run FindMarkers #
 name = FindMarkers(integrated_object, ident.1 = "Immune_PCD", ident.2 = "Immune_Possible_Control", verbose = TRUE, test.use = "MAST")
-file = paste0("PCD", "_MAST_", "spag1_", "possible_control_", "SCT", "_immune",  ".csv")
+file = paste0("PCD", "_MAST_", "[Redacted]_", "possible_control_", "SCT", "_immune",  ".csv")
 write.csv(name, file)
 
 
@@ -1565,7 +1565,7 @@ wpid2name <- dplyr::select(wp.hs.gmt, wpid, name) #TERM2NAME
 ##---Immune - WikiPathways---##
 
 # Read CSV #
-Immune.Markers <- read.csv("Differential_Expression/Immune/Mother/Wilcoxon/PCD_wilcox_spag1_SCT_immune.csv", header = TRUE)
+Immune.Markers <- read.csv("Differential_Expression/Immune/Mother/Wilcoxon/PCD_wilcox_[Redacted]_SCT_immune.csv", header = TRUE)
 
 # Rename Column 1 #
 colnames(Immune.Markers)[1] <- "GeneNames"
@@ -1596,7 +1596,7 @@ barplot(Immune.WP.UP, showCategory = 10) +
 ##---Immune - CompareCluster---##
 
 # Read CSV #
-Immune.Markers.Mother <- read.csv("Differential_Expression/Immune/Mother/Wilcoxon/PCD_wilcox_spag1_SCT_immune.csv", header = TRUE) # Mother
+Immune.Markers.Mother <- read.csv("Differential_Expression/Immune/Mother/Wilcoxon/PCD_wilcox_[Redacted]_SCT_immune.csv", header = TRUE) # Mother
 
 # Rename Column 1 #
 colnames(Immune.Markers.Mother)[1] <- "GeneNames" # Mother
@@ -1669,7 +1669,7 @@ integrated_object <- PrepSCTFindMarkers(integrated_object)
 
 # Run FindMarkers #
 name = FindMarkers(integrated_object, ident.1 = "Airway_PCD", ident.2 = "Airway_Mother", verbose = TRUE)
-file = paste0("PCD", "_wilcox_", "spag1_", "SCT", "_airway",  ".csv")
+file = paste0("PCD", "_wilcox_", "[Redacted]_", "SCT", "_airway",  ".csv")
 write.csv(name, file)
 
 
@@ -1688,7 +1688,7 @@ object.control[['integrated']] <- NULL
 # Change Column Name #
 object.control$sampleid <- object.control$stim2
 
-####-------SPAG1 Object Set-Up-------####
+####-------[Redacted] Object Set-Up-------####
 
 # Load Object #
 object.pcd <- readRDS("Objects/merged_object_SCT_Integrated_SR004328_annotated.rds")
@@ -1711,7 +1711,7 @@ object.pcd[['SCT']] <- NULL
 
 # Merge Objects#
 merged_object <- merge(object.control, y = c(object.pcd), 
-                       add.cell.ids = c("control", "pcd"), project = "Spag1")
+                       add.cell.ids = c("control", "pcd"), project = "[Redacted]")
 
 # Save #
 saveRDS(merged_object, "merged_object_pcd_HNEC102_HNEC103.rds") 
@@ -1777,7 +1777,7 @@ merged_object_SCT_Integrated <- FindClusters(merged_object_SCT_Integrated, resol
 merged_object_SCT_Integrated <- RunUMAP(merged_object_SCT_Integrated, dims = 1:30, reduction = "integrated.dr")
 
 # Save #
-saveRDS(merged_object_SCT_Integrated, "merged_object_SCT_Integrated_SPAG1_DNAH5.rds")
+saveRDS(merged_object_SCT_Integrated, "merged_object_SCT_Integrated_[Redacted]_DNAH5.rds")
 
 # Visualize UMAP #
 DimPlot(merged_object_SCT_Integrated, reduction = "umap", group.by = c("seurat_clusters"))
@@ -1788,7 +1788,7 @@ merged_object_SCT_Integrated[["RNA"]] <- JoinLayers(merged_object_SCT_Integrated
 ####-------Cluster Annotation-------####
 
 # Load Object #
-merged_object_SCT_Integrated <- readRDS("Objects/merged_object_SCT_Integrated_SPAG1_DNAH5.rds")
+merged_object_SCT_Integrated <- readRDS("Objects/merged_object_SCT_Integrated_[Redacted]_DNAH5.rds")
 
 # Change Default Assay #
 DefaultAssay(merged_object_SCT_Integrated) <- 'RNA'
@@ -1797,7 +1797,7 @@ DefaultAssay(merged_object_SCT_Integrated) <- 'RNA'
 All.Markers <- FindAllMarkers(merged_object_SCT_Integrated, only.pos = TRUE, max.cells.per.ident = 1000)
 
 # Save as CSV #
-write.csv(All.Markers, "SPAG1_DNAH5_markers.csv")
+write.csv(All.Markers, "[Redacted]_DNAH5_markers.csv")
 
 # Pertinent Markers #
 FeaturePlot(merged_object_SCT_Integrated,"JUNB") # Stress/Ribosomal Contamination
@@ -1840,7 +1840,7 @@ merged_object_SCT_Integrated$final_cluster <- Idents(merged_object_SCT_Integrate
 DimPlot(merged_object_SCT_Integrated, label = TRUE)
 
 
-####-------DE Analysis - SPAG1/DNAH5 (PCD vs Control) - Set-Up-------####
+####-------DE Analysis - [Redacted]/DNAH5 (PCD vs Control) - Set-Up-------####
 
 # Add Column Discerning Control v PCD #
 merged_object_SCT_Integrated$stim10 <- paste(merged_object_SCT_Integrated$final_cluster, merged_object_SCT_Integrated$stim, sep='_')
@@ -1865,7 +1865,7 @@ merged_object_SCT_Integrated <- PrepSCTFindMarkers(merged_object_SCT_Integrated)
 # Run FindMarkers #
 for (i in 1:4) {
   name = FindMarkers(merged_object_SCT_Integrated, ident.1 = pcd_list[[i]], ident.2 = control_list[[i]], verbose = TRUE)
-  file = paste0(unlist((strsplit(control_list[[i]], split = "_")))[1], "_wilcox_", "spag1_", "SCT", "DNAH5_control", ".csv")
+  file = paste0(unlist((strsplit(control_list[[i]], split = "_")))[1], "_wilcox_", "[Redacted]_", "SCT", "DNAH5_control", ".csv")
   write.csv(name, file)
 }
 
@@ -1875,7 +1875,7 @@ for (i in 1:4) {
 # Run FindMarkers #
 for (i in 1:4) {
   name = FindMarkers(merged_object_SCT_Integrated, ident.1 = pcd_list[[i]], ident.2 = control_list[[i]], verbose = TRUE, test.use = "MAST")
-  file = paste0(unlist((strsplit(control_list[[i]], split = "_")))[1], "_MAST_", "spag1_", "SCT", "DNAH5_control", ".csv")
+  file = paste0(unlist((strsplit(control_list[[i]], split = "_")))[1], "_MAST_", "[Redacted]_", "SCT", "DNAH5_control", ".csv")
   write.csv(name, file)
 }
 
@@ -1905,7 +1905,7 @@ wpid2name <- dplyr::select(wp.hs.gmt, wpid, name) #TERM2NAME
 ##---Basal - WikiPathways---##
 
 # Read CSV #
-Basal.Markers <- read.csv("Differential_Expression/Control/Wilcoxon/Basal_wilcox_spag1_SCTDNAH5_control.csv", header = TRUE)
+Basal.Markers <- read.csv("Differential_Expression/Control/Wilcoxon/Basal_wilcox_[Redacted]_SCTDNAH5_control.csv", header = TRUE)
 
 # Rename Column 1 #
 colnames(Basal.Markers)[1] <- "GeneNames"
@@ -1936,8 +1936,8 @@ barplot(Basal.WP.UP, showCategory = 10) +
 ##---Basal - CompareCluster---##
 
 # Read CSV #
-Basal.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/Basal_wilcox_spag1_SCT.csv", header = TRUE) # Mother
-Basal.Markers.Control <- read.csv("Differential_Expression/Control/Wilcoxon/Basal_wilcox_spag1_SCTDNAH5_control.csv", header = TRUE) # Possible Control
+Basal.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/Basal_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
+Basal.Markers.Control <- read.csv("Differential_Expression/Control/Wilcoxon/Basal_wilcox_[Redacted]_SCTDNAH5_control.csv", header = TRUE) # Possible Control
 
 # Rename Column 1 #
 colnames(Basal.Markers.Mother)[1] <- "GeneNames" # Mother
@@ -1978,7 +1978,7 @@ dotplot(Basal.CC, showCategory = 5) +
 ##---Ciliated - WikiPathways---##
 
 # Read CSV #
-Ciliated.Markers <- read.csv("Differential_Expression/Control/Wilcoxon/Ciliated_wilcox_spag1_SCTDNAH5_control.csv", header = TRUE)
+Ciliated.Markers <- read.csv("Differential_Expression/Control/Wilcoxon/Ciliated_wilcox_[Redacted]_SCTDNAH5_control.csv", header = TRUE)
 
 # Rename Column 1 #
 colnames(Ciliated.Markers)[1] <- "GeneNames"
@@ -2009,8 +2009,8 @@ barplot(Ciliated.WP.UP, showCategory = 10) +
 ##---Ciliated - CompareCluster---##
 
 # Read CSV #
-Ciliated.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/Ciliated_wilcox_spag1_SCT.csv", header = TRUE) # Mother
-Ciliated.Markers.Control <- read.csv("Differential_Expression/Control/Wilcoxon/Ciliated_wilcox_spag1_SCTDNAH5_control.csv", header = TRUE) # Possible Control
+Ciliated.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/Ciliated_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
+Ciliated.Markers.Control <- read.csv("Differential_Expression/Control/Wilcoxon/Ciliated_wilcox_[Redacted]_SCTDNAH5_control.csv", header = TRUE) # Possible Control
 
 # Rename Column 1 #
 colnames(Ciliated.Markers.Mother)[1] <- "GeneNames" # Mother
@@ -2051,7 +2051,7 @@ dotplot(Ciliated.CC, showCategory = 5) +
 ##---Secretory - WikiPathways---##
 
 # Read CSV #
-Secretory.Markers <- read.csv("Differential_Expression/Control/Wilcoxon/Secretory_wilcox_spag1_SCTDNAH5_control.csv", header = TRUE)
+Secretory.Markers <- read.csv("Differential_Expression/Control/Wilcoxon/Secretory_wilcox_[Redacted]_SCTDNAH5_control.csv", header = TRUE)
 
 # Rename Column 1 #
 colnames(Secretory.Markers)[1] <- "GeneNames"
@@ -2082,8 +2082,8 @@ barplot(Secretory.WP.UP, showCategory = 10) +
 ##---Secretory - CompareCluster---##
 
 # Read CSV #
-Secretory.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/Secretory_wilcox_spag1_SCT.csv", header = TRUE) # Mother
-Secretory.Markers.Control <- read.csv("Differential_Expression/Control/Wilcoxon/Secretory_wilcox_spag1_SCTDNAH5_control.csv", header = TRUE) # Possible Control
+Secretory.Markers.Mother <- read.csv("Differential_Expression/Mother/Wilcoxon_SCT/Secretory_wilcox_[Redacted]_SCT.csv", header = TRUE) # Mother
+Secretory.Markers.Control <- read.csv("Differential_Expression/Control/Wilcoxon/Secretory_wilcox_[Redacted]_SCTDNAH5_control.csv", header = TRUE) # Possible Control
 
 # Rename Column 1 #
 colnames(Secretory.Markers.Mother)[1] <- "GeneNames" # Mother
@@ -2134,7 +2134,7 @@ merged_object_SCT_Integrated$final_cluster <- Idents(merged_object_SCT_Integrate
 # Visualize
 DimPlot(merged_object_SCT_Integrated, label = TRUE)
 
-####-------DE Analysis - Airway - SPAG1/DNAH5 (PCD vs Control) - Set-Up-------####
+####-------DE Analysis - Airway - [Redacted]/DNAH5 (PCD vs Control) - Set-Up-------####
 
 # Add Column Discerning Control v PCD #
 merged_object_SCT_Integrated$stim10 <- paste(merged_object_SCT_Integrated$final_cluster, merged_object_SCT_Integrated$stim, sep='_')
@@ -2150,14 +2150,14 @@ merged_object_SCT_Integrated <- PrepSCTFindMarkers(merged_object_SCT_Integrated)
 
 # Run FindMarkers #
 name = FindMarkers(merged_object_SCT_Integrated, ident.1 = "Airway_PCD", ident.2 = "Airway_CTRL", verbose = TRUE)
-file = paste0("PCD", "_wilcox_", "spag1_", "SCT", "DNAH5_control", "_Airway", ".csv")
+file = paste0("PCD", "_wilcox_", "[Redacted]_", "SCT", "DNAH5_control", "_Airway", ".csv")
 write.csv(name, file)
 
 
 ##---Airway - WikiPathways - Mother---##
 
 # Read CSV #
-Airway.Markers <- read.csv("Differential_Expression/Airway/Mother/Wilcoxon/PCD_wilcox_spag1_SCT_airway.csv", header = TRUE)
+Airway.Markers <- read.csv("Differential_Expression/Airway/Mother/Wilcoxon/PCD_wilcox_[Redacted]_SCT_airway.csv", header = TRUE)
 
 # Rename Column 1 #
 colnames(Airway.Markers)[1] <- "GeneNames"
@@ -2188,7 +2188,7 @@ barplot(Airway.WP.UP, showCategory = 10) +
 ##---Airway - WikiPathways - Control---##
 
 # Read CSV #
-Airway.Markers <- read.csv("Differential_Expression/Airway/Control/Wilcoxon/PCD_wilcox_spag1_SCTDNAH5_control_Airway.csv", header = TRUE)
+Airway.Markers <- read.csv("Differential_Expression/Airway/Control/Wilcoxon/PCD_wilcox_[Redacted]_SCTDNAH5_control_Airway.csv", header = TRUE)
 
 # Rename Column 1 #
 colnames(Airway.Markers)[1] <- "GeneNames"
@@ -2219,8 +2219,8 @@ barplot(Airway.WP.UP, showCategory = 6) +
 ##---Airway - CompareCluster---##
 
 # Read CSV #
-Airway.Markers.Mother <- read.csv("Differential_Expression/Airway/Mother/Wilcoxon/PCD_wilcox_spag1_SCT_airway.csv", header = TRUE) # Mother
-Airway.Markers.Control <- read.csv("Differential_Expression/Airway/Control/Wilcoxon/PCD_wilcox_spag1_SCTDNAH5_control_Airway.csv", header = TRUE) # Possible Control
+Airway.Markers.Mother <- read.csv("Differential_Expression/Airway/Mother/Wilcoxon/PCD_wilcox_[Redacted]_SCT_airway.csv", header = TRUE) # Mother
+Airway.Markers.Control <- read.csv("Differential_Expression/Airway/Control/Wilcoxon/PCD_wilcox_[Redacted]_SCTDNAH5_control_Airway.csv", header = TRUE) # Possible Control
 
 # Rename Column 1 #
 colnames(Airway.Markers.Mother)[1] <- "GeneNames" # Mother
